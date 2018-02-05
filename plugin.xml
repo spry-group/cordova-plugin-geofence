@@ -119,6 +119,10 @@
 
     <!-- ios -->
     <platform name="ios">
+        <preference name="LOCATION_ALWAYS_AND_WHEN_IN_USE_DESCRIPTION" default="always and when in use."/>
+        <config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription">
+            <string>$LOCATION_ALWAYS_AND_WHEN_IN_USE_DESCRIPTION</string>
+        </config-file>
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
             <string>${EXECUTABLE_NAME} Would Like to Use Your Current Location Even In Background.</string>
         </config-file>
